@@ -20,6 +20,10 @@ app.use("/vehicles", vehicleRoutes);
 app.use("/trips", tripRoutes);
 app.use("/analytics", analyticsRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Fleet Backend Running Successfully 🚀");
+});
+
 app.use((req, res) => {
   res.status(404).json({ message: "This Request Is Not Found" });
 });
